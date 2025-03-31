@@ -26,21 +26,22 @@ def regula_falsi(f, a , b, max_iter=25):
             a = c
     return c, interacoes
 
+if __name__ == "__main__":
 
-raizPrimeiraFuncao, interacoesPrimeiraFuncao = regula_falsi(functions.primeiraFuncao, 2, 3)
-print(raizPrimeiraFuncao)
-print(f'Número de interações: {len(interacoesPrimeiraFuncao)}')
-raizSegundaFuncao, interacoesSegundafuncao = regula_falsi(functions.segundaFuncao, 0, 1)
-print(raizSegundaFuncao)
-print(f'Número de interações: {len(interacoesSegundafuncao)}')
-raizTerceiraFuncao, interacoesTerceiraFuncao = regula_falsi(functions.terceiraFuncao, 1, 2)
-print(raizTerceiraFuncao)
-print(f'Número de interações: {len(interacoesTerceiraFuncao)}')
-raizQuartaFuncao, interacoesQuartaFuncao = regula_falsi(functions.quartaFuncao, 0, 1)
-print(raizQuartaFuncao)
-print(f'Número de interações: {len(interacoesQuartaFuncao)}')
+    raizPrimeiraFuncao, interacoesPrimeiraFuncao = regula_falsi(functions.primeiraFuncao, 2, 3)
+    print(raizPrimeiraFuncao)
+    print(f'Número de interações: {len(interacoesPrimeiraFuncao)}')
+    raizSegundaFuncao, interacoesSegundafuncao = regula_falsi(functions.segundaFuncao, 0, 1)
+    print(raizSegundaFuncao)
+    print(f'Número de interações: {len(interacoesSegundafuncao)}')
+    raizTerceiraFuncao, interacoesTerceiraFuncao = regula_falsi(functions.terceiraFuncao, 1, 2)
+    print(raizTerceiraFuncao)
+    print(f'Número de interações: {len(interacoesTerceiraFuncao)}')
+    raizQuartaFuncao, interacoesQuartaFuncao = regula_falsi(functions.quartaFuncao, 0, 1)
+    print(raizQuartaFuncao)
+    print(f'Número de interações: {len(interacoesQuartaFuncao)}')
 
-gerar_csv.gerar_csv('regula_falsi_point_1', interacoesPrimeiraFuncao)
-gerar_csv.gerar_csv('regula_falsi_point_2', interacoesSegundafuncao)
-gerar_csv.gerar_csv('regula_falsi_point_3', interacoesTerceiraFuncao)
-gerar_csv.gerar_csv('regula_falsi_point_4', interacoesQuartaFuncao)
+    gerar_csv.gerar_csv('regula_falsi_point_1', interacoesPrimeiraFuncao)
+    gerar_csv.gerar_csv('regula_falsi_point_2', interacoesSegundafuncao)
+    gerar_csv.gerar_csv('regula_falsi_point_3', interacoesTerceiraFuncao)
+    gerar_csv.gerar_csv('regula_falsi_point_4', interacoesQuartaFuncao)
