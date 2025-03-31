@@ -1,7 +1,7 @@
 import functions
 import gerar_csv
 
-def ponto_fixo(g, x0, tol=1e4, max_iter=25):
+def ponto_fixo(g, x0, tol=1e-6, max_iter=25):
     interacoes = []
     for i in range(max_iter):
         x1 = g(x0)
@@ -14,6 +14,7 @@ def ponto_fixo(g, x0, tol=1e4, max_iter=25):
         x0 = x1
     
     print("O método não convergiu após o número máximo de iterações.")
+    return x1, interacoes
 
 raizPrimeiraFuncao, interacoesPrimeiraFuncao = ponto_fixo(functions.primeiraFuncaoInteracao, 2.5)
 print(raizPrimeiraFuncao)

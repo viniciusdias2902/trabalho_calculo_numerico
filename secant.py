@@ -1,7 +1,7 @@
 import functions
 import gerar_csv
 
-def secante(f, x0, x1, tol=1e4, max_iter=25):
+def secante(f, x0, x1, tol=1e-6, max_iter=25):
     interacoes = []
     for _ in range(max_iter):
         if abs(f(x1) - f(x0)) < 1e-12:  # Evita divisão por zero

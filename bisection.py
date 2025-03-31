@@ -1,33 +1,27 @@
 import functions
 import gerar_csv
 
-functions.primeiraFuncao(2)
 
-def bissecao(f, a, b, tol=1e4, max_iter=25):
-    resultados = []
-    if f(a) * f(b) >= 0:
-        print("O método da bisseção requer que f(a) e f(b) tenham sinais opostos.")
-        return None
+def bissecao(f,a,b, max_iter=25):
+    interacoes = []
+    if (f(a) * f(b) >= 0):
+        print("O produto entre f(a) e f(b) deve ser negativo \n")
+        return
+    c = a
+    for _ in range(max_iter):
+            if (((b-a) < 0.01)):
+                 return c, interacoes
+            
+            c = (a+b)/2
+            interacoes.append(c)
+            if (f(c) == 0.0):
+                break
     
-    c_anterior = None
-
-    interacao = 0
-    while interacao < (max_iter):
-        c = (a + b) / 2            
-        resultados.append(c)
-        if abs(f(c)) <= tol or (b - a)  <= tol or  c_anterior is not None and abs(c - c_anterior) < tol:
-            return c, resultados
-        
-        if f(a) * f(c) < 0:
-            b = c
-        else:
-            a = c
-        c_anterior = c
-        interacao+=1
-    
-    print("O método não convergiu após o número máximo de iterações.")
-    return None
-
+            if (f(c)*f(a) < 0):
+                b = c
+            else:
+                a = c    
+    return c, interacoes
 
 raizPrimeiraFuncao, interacoesPrimeiraFuncao = bissecao(functions.primeiraFuncao, 2, 3)
 print(raizPrimeiraFuncao)
