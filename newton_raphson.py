@@ -1,6 +1,5 @@
 import exibir_chutes
 import functions
-import gerar_csv
 
 def newton_raphson(f, df, x0, tol=1e-6, max_iter=25):
     interacoes = []

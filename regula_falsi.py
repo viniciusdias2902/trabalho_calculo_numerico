@@ -1,6 +1,5 @@
 from exibir_chutes import exibir_chutes
 import functions
-import gerar_csv
 
 functions.primeiraFuncao(2)
 
@@ -37,4 +36,4 @@ if __name__ == "__main__":
     lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
 
     for interacao in lista_interacoes:
-        exibir_chutes(interacao, 'Método numérico: ponto falso')
+        exibir_chutes(interacao, 'Método numérico: falsa posição')

@@ -1,6 +1,5 @@
 from exibir_chutes import exibir_chutes
 import functions
-import gerar_csv
 
 
 def bissecao(f,a,b, max_iter=25):

@@ -1,6 +1,5 @@
 from exibir_chutes import exibir_chutes
 import functions
-import gerar_csv
 
 def ponto_fixo(g, x0, tol=1e-6, max_iter=25):
     interacoes = []
