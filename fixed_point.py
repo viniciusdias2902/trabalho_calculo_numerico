@@ -1,3 +1,4 @@
+from exibir_chutes import exibir_chutes
 import functions
 import gerar_csv
 
@@ -19,19 +20,11 @@ def ponto_fixo(g, x0, tol=1e-6, max_iter=25):
 if __name__ == "__main__":
 
     raizPrimeiraFuncao, interacoesPrimeiraFuncao = ponto_fixo(functions.primeiraFuncaoInteracao, 2.5)
-    print(raizPrimeiraFuncao)
-    print(f'Número de interações: {len(interacoesPrimeiraFuncao)}')
     raizSegundaFuncao, interacoesSegundafuncao = ponto_fixo(functions.segundaFuncaoInteracao, 0.5)
-    print(raizSegundaFuncao)
-    print(f'Número de interações: {len(interacoesSegundafuncao)}')
     raizTerceiraFuncao, interacoesTerceiraFuncao = ponto_fixo(functions.terceiraFuncaoInteracao, 1.5)
-    print(raizTerceiraFuncao)
-    print(f'Número de interações: {len(interacoesTerceiraFuncao)}')
     raizQuartaFuncao, interacoesQuartaFuncao = ponto_fixo(functions.quartaFuncaoInteracao, 0.5)
-    print(raizQuartaFuncao)
-    print(f'Número de interações: {len(interacoesQuartaFuncao)}')
 
-    gerar_csv.gerar_csv('fixed_point_1', interacoesPrimeiraFuncao)
-    gerar_csv.gerar_csv('fixed_point_2', interacoesSegundafuncao)
-    gerar_csv.gerar_csv('fixed_point_3', interacoesTerceiraFuncao)
-    gerar_csv.gerar_csv('fixed_point_4', interacoesQuartaFuncao)
+    lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
+
+    for interacao in lista_interacoes:
+        exibir_chutes(interacao, 'Método numérico: ponto fixo')

@@ -1,3 +1,4 @@
+from exibir_chutes import exibir_chutes
 import functions
 import gerar_csv
 
@@ -25,19 +26,11 @@ def bissecao(f,a,b, max_iter=25):
 
 if __name__ == "__main__":
     raizPrimeiraFuncao, interacoesPrimeiraFuncao = bissecao(functions.primeiraFuncao, 2, 3)
-    print(raizPrimeiraFuncao)
-    print(f'Número de interações: {len(interacoesPrimeiraFuncao)}')
     raizSegundaFuncao, interacoesSegundafuncao = bissecao(functions.segundaFuncao, 0, 1)
-    print(raizSegundaFuncao)
-    print(f'Número de interações: {len(interacoesSegundafuncao)}')
     raizTerceiraFuncao, interacoesTerceiraFuncao = bissecao(functions.terceiraFuncao, 1, 2)
-    print(raizTerceiraFuncao)
-    print(f'Número de interações: {len(interacoesTerceiraFuncao)}')
     raizQuartaFuncao, interacoesQuartaFuncao = bissecao(functions.quartaFuncao, 0, 1)
-    print(raizQuartaFuncao)
-    print(f'Número de interações: {len(interacoesQuartaFuncao)}')
 
-    gerar_csv.gerar_csv('bisection_point_1', interacoesPrimeiraFuncao)
-    gerar_csv.gerar_csv('bisection_point_2', interacoesSegundafuncao)
-    gerar_csv.gerar_csv('bisection_point_3', interacoesTerceiraFuncao)
-    gerar_csv.gerar_csv('bisection_point_4', interacoesQuartaFuncao)
+    lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
+
+    for interacao in lista_interacoes:
+        exibir_chutes(interacao, 'Método numérico: bisseção')

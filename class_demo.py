@@ -1,18 +1,17 @@
+from exibir_chutes import exibir_chutes
+from regula_falsi import regula_falsi
+from fixed_point import ponto_fixo
+from newton_raphson import newton_raphson
+from bisection import bissecao
 import functions
-import regula_falsi
-import fixed_point
-import secant
-import bisection
 
-raizPrimeiraFuncao, interacoesPrimeiraFuncao = regula_falsi.regula_falsi(functions.primeiraFuncao, 2, 3)
-print(raizPrimeiraFuncao)
-print(f'Número de interações: {len(interacoesPrimeiraFuncao)}')
-raizSegundaFuncao, interacoesSegundaFuncao = fixed_point.ponto_fixo(functions.segundaFuncaoInteracao, 0.5)
-print(raizSegundaFuncao)
-print(f'Número de interações: {len(interacoesSegundaFuncao)}')
-raizTerceiraFuncao, interacoesTerceiraFuncao = secant.secante(functions.terceiraFuncao, 1, 2)
-print(raizTerceiraFuncao)
-print(f'Número de interações: {len(interacoesTerceiraFuncao)}')
-raizQuartaFuncao, interacoesQuartaFuncao = bisection.bissecao(functions.quartaFuncao, 0, 1)
-print(raizQuartaFuncao)
-print(f'Número de interações: {len(interacoesQuartaFuncao)}')
+
+
+raizPrimeiraFuncao, interacoesPrimeiraFuncao = regula_falsi(functions.primeiraFuncao, 2, 3)
+exibir_chutes(interacoesPrimeiraFuncao, 'Método numérico: posição Falsa')
+raizSegundaFuncao, interacoesSegundaFuncao = ponto_fixo(functions.segundaFuncaoInteracao, 0.5)
+exibir_chutes(interacoesSegundaFuncao, 'Método numérico: ponto fixo')
+raizTerceiraFuncao, interacoesTerceiraFuncao = newton_raphson(functions.terceiraFuncao, functions.derivadaTerceiraFuncao, 1.5)
+exibir_chutes(interacoesTerceiraFuncao, 'Método numérico: newton-raphson')
+raizQuartaFuncao, interacoesQuartaFuncao = bissecao(functions.quartaFuncao, 0, 1)
+exibir_chutes(interacoesQuartaFuncao, 'Método numérico: bisseção')
