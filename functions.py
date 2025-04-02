@@ -17,3 +17,12 @@ def terceiraFuncaoInteracao(x):
     return math.sqrt(3-math.log(x))
 def quartaFuncaoInteracao(x):
     return math.e ** x / 4
+
+def derivadaPrimeiraFuncao(x):
+    return 3 * (x ** 2) - 4
+def derivadaSegundaFuncao(x):
+    return -math.sin(x) - 1
+def derivadaTerceiraFuncao(x):
+    return 2 * x + 1/x
+def derivadaQuartaFuncao(x):
+    return math.e ** x - 4
