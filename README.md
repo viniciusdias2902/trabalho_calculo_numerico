@@ -2,7 +2,9 @@
 
 ## Descrição
 
-Este repositório contém a implementação de 5 métodos numéricos em Python, desenvolvidos para encontrar raízes de equações. Cada método foi projetado com foco na precisão e eficiência, utilizando apenas bibliotecas padrão do Python. Dados adicionais foram gerados em CSV para que estudos complementares possam serem desenvolvidos. 
+Este repositório contém a implementação de 5 métodos numéricos em Python, desenvolvidos para encontrar raízes de equações. Cada método foi projetado com foco na precisão e eficiência, utilizando apenas bibliotecas padrão do Python. 
+
+Bibliotecas externas foram utilizadas para geração de gráficos para análise mais aprofundada dos algoritmos utilizados.
 
 ## Métodos implementados:
 - Falsa posição
