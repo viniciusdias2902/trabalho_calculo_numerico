@@ -23,8 +23,8 @@ Este repositório contém a implementação de 5 métodos numéricos em Python, 
 ![Gráfico que mostra uma análise dos métodos numéricos utilizados](graphs/comparacao_desempenho.png)
 
 ## Comparação de convergência
-![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_1)
-![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_2)
-![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_3)
-![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_4)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_1.png)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_2.png)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_3.png)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](graphs/convergencia_funcao_4.png)
 
