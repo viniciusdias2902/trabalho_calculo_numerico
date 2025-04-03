@@ -3,7 +3,7 @@ import functions
 from gerar_csv import gerar_csv
 
 
-def bissecao(f,a,b, max_iter=100):
+def bissecao(f,a,b, max_iter=100, tol=1e-6):
     interacoes = []
     if (f(a) * f(b) >= 0):
         print("O produto entre f(a) e f(b) deve ser negativo \n")
@@ -15,7 +15,7 @@ def bissecao(f,a,b, max_iter=100):
             
             c = (a+b)/2
             interacoes.append(c)
-            if (f(c) == 0.0):
+            if (abs(f(c)) < tol):
                 break
     
             if (f(c)*f(a) < 0):
