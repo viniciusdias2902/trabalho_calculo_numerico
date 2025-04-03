@@ -20,7 +20,6 @@ Este repositório contém a implementação de 5 métodos numéricos em Python, 
 ![imagem do método numérico - Secante](images/secante.png)
 
 ## Comparação de desempenho
-
 ![Gráfico que mostra uma análise dos métodos numéricos utilizados](graphs/comparacao_desempenho.png)
 
 ## Comparação de convergência
