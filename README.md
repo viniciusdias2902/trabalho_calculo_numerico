@@ -18,3 +18,14 @@ Este repositório contém a implementação de 5 métodos numéricos em Python, 
 ![imagem do método numérico - Newton-Raphson](images/newton_raphson.png)
 ![imagem do método numérico - Bisseção](images/bissecao.png)
 ![imagem do método numérico - Secante](images/secante.png)
+
+## Comparação de desempenho
+
+![Gráfico que mostra uma análise dos métodos numéricos utilizados](images/comparacao_desempenho.png)
+
+## Comparação de convergência
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](images/convergencia_funcao_1)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](images/convergencia_funcao_2)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](images/convergencia_funcao_3)
+![Gráfico que mostra uma análise da convergência dos métodos numéricos para a primeira função estudada](images/convergencia_funcao_4)
+
