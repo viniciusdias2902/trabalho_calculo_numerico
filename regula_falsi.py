@@ -36,7 +36,8 @@ if __name__ == "__main__":
 
     lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
 
-    for interacao in lista_interacoes:
+    for index, interacao in enumerate(lista_interacoes):
+        gerar_csv(f'regula_falsi{index+1}', interacao)
         exibir_chutes(interacao, 'Método numérico: falsa posição')
     
     gerar_csv('regula_falsi', interacoesPrimeiraFuncao)
