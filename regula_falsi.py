@@ -4,7 +4,7 @@ from gerar_csv import gerar_csv
 
 functions.primeiraFuncao(2)
 
-def regula_falsi(f, a , b, max_iter=100):
+def regula_falsi(f, a , b, max_iter=100, tol=1e-6):
     interacoes = []
 
     if f(a) * f(b) >= 0:
@@ -18,7 +18,7 @@ def regula_falsi(f, a , b, max_iter=100):
         c = (a * f(b) - b * f(a))/ (f(b) - f(a))
         interacoes.append(c)
         
-        if f(c) == 0:
+        if abs(f(c)) < tol:
             break
         
         elif f(c) * f(a) < 0:
@@ -37,10 +37,6 @@ if __name__ == "__main__":
     lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
 
     for index, interacao in enumerate(lista_interacoes):
-        gerar_csv(f'regula_falsi{index+1}', interacao)
+        gerar_csv(f'regula_falsi_{index+1}', interacao)
         exibir_chutes(interacao, 'Método numérico: falsa posição')
     
-    gerar_csv('regula_falsi', interacoesPrimeiraFuncao)
-    gerar_csv('regula_falsi', interacoesSegundafuncao)
-    gerar_csv('regula_falsi', interacoesTerceiraFuncao)
-    gerar_csv('regula_falsi', interacoesQuartaFuncao)

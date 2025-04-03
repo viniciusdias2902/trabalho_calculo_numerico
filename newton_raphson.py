@@ -1,6 +1,6 @@
-import exibir_chutes
 import functions
 from gerar_csv import gerar_csv
+from exibir_chutes import exibir_chutes
 
 def newton_raphson(f, df, x0, tol=1e-6, max_iter=100):
     interacoes = []
@@ -32,10 +32,5 @@ if __name__ == "__main__":
     lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
 
     for index, interacao in enumerate(lista_interacoes):
-        gerar_csv(f'newton_raphson{index+1}', interacao)
+        gerar_csv(f'newton_raphson_{index+1}', interacao)
         exibir_chutes(interacao, 'Método numérico: newton-raphson')
-    
-    gerar_csv('newton_raphson', interacoesPrimeiraFuncao)
-    gerar_csv('newton_raphson', interacoesSegundafuncao)
-    gerar_csv('newton_raphson', interacoesTerceiraFuncao)
-    gerar_csv('newton_raphson', interacoesQuartaFuncao)

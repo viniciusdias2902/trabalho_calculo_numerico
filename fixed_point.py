@@ -1,6 +1,6 @@
 from exibir_chutes import exibir_chutes
 import functions
-import gerar_csv
+from gerar_csv import gerar_csv
 
 def ponto_fixo(g, x0, tol=1e-6, max_iter=100):
     interacoes = []
@@ -27,5 +27,5 @@ if __name__ == "__main__":
     lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
 
     for index, interacao in enumerate(lista_interacoes):
-        gerar_csv(f'fixed_point{index+1}', interacao)
+        gerar_csv(f'fixed_point_{index+1}', interacao)
         exibir_chutes(interacao, 'Método numérico: ponto fixo')

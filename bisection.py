@@ -33,5 +33,5 @@ if __name__ == "__main__":
     lista_interacoes = [interacoesPrimeiraFuncao, interacoesSegundafuncao, interacoesTerceiraFuncao, interacoesQuartaFuncao]
 
     for index, interacao in enumerate(lista_interacoes):
-        gerar_csv(f'bisection_{index+1}', lista_interacoes)        
+        gerar_csv(f'bisection_{index+1}', interacao)        
         exibir_chutes(interacao, 'Método numérico: bisseção')
