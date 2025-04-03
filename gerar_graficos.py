@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Configuração inicial
 PASTAS_METODOS = ['bisection', 'fixed_point', 'newton_raphson', 'regula_falsi', 'secant']
 NUM_FUNCOES = 4
 CORES = sns.color_palette('husl', n_colors=5)
@@ -70,7 +69,6 @@ def plotar_comparacao_desempenho(dados):
     plt.close()
 
 def gerar_relatorio(dados):
-    """Gera relatório textual com análises"""
     analise = []
     
     for funcao, dfs in dados.items():
@@ -87,18 +85,14 @@ def gerar_relatorio(dados):
     print(df_analise.to_string(index=False))
 
 def main():
-    # Configuração estética
     sns.set_theme(style="whitegrid")
     plt.rcParams['font.family'] = 'DejaVu Sans'
     
-    # Processamento dos dados
     dados = carregar_dados()
     
-    # Geração de gráficos
     plotar_convergencia_individual(dados)
     plotar_comparacao_desempenho(dados)
     
-    # Análise textual
     gerar_relatorio(dados)
 
 if __name__ == "__main__":
