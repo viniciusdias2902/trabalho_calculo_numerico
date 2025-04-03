@@ -8,7 +8,7 @@ def bissecao(f,a,b, max_iter=25):
         print("O produto entre f(a) e f(b) deve ser negativo \n")
         return
     c = a
-    for _ in range(max_iter):
+    for _ in range(max_iter+1):
             if (((b-a) < 0.01)):
                  return c, interacoes
             

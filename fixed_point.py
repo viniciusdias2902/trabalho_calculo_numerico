@@ -3,7 +3,7 @@ import functions
 
 def ponto_fixo(g, x0, tol=1e-6, max_iter=25):
     interacoes = []
-    for i in range(max_iter):
+    for i in range(max_iter+1):
         x1 = g(x0)
         interacoes.append(x1)
         erro = abs(x1 - x0)

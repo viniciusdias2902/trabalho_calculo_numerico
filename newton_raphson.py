@@ -4,7 +4,7 @@ import functions
 def newton_raphson(f, df, x0, tol=1e-6, max_iter=25):
     interacoes = []
     x = x0
-    for _ in range(max_iter):
+    for _ in range(max_iter+1):
         fx = f(x)
         if abs(fx) < tol:
             return x, interacoes

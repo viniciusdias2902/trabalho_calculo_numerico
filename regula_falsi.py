@@ -12,7 +12,7 @@ def regula_falsi(f, a , b, max_iter=25):
     
     c = a 
     
-    for i in range(max_iter):
+    for i in range(max_iter+1):
         
         c = (a * f(b) - b * f(a))/ (f(b) - f(a))
         interacoes.append(c)

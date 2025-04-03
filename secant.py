@@ -3,7 +3,7 @@ import functions
 
 def secante(f, x0, x1, tol=1e-6, max_iter=25):
     interacoes = []
-    for _ in range(max_iter):
+    for _ in range(max_iter+1):
         if abs(f(x1) - f(x0)) < 1e-12:  # Evita divisão por zero
             print("Erro: Divisão por zero")
             return None
