@@ -1,7 +1,8 @@
 from exibir_chutes import exibir_chutes
 import functions
+from gerar_csv import gerar_csv
 
-def secante(f, x0, x1, tol=1e-6, max_iter=25):
+def secante(f, x0, x1, tol=1e-6, max_iter=100):
     interacoes = []
     for _ in range(max_iter+1):
         if abs(f(x1) - f(x0)) < 1e-12:  # Evita divisão por zero
@@ -29,3 +30,7 @@ if __name__ == "__main__":
     for interacao in lista_interacoes:
         exibir_chutes(interacao, 'Método numérico: secante')
 
+    gerar_csv('secant', interacoesPrimeiraFuncao)
+    gerar_csv('secant', interacoesSegundafuncao)
+    gerar_csv('secant', interacoesTerceiraFuncao)
+    gerar_csv('secant', interacoesQuartaFuncao)

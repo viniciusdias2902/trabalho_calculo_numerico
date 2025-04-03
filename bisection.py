@@ -1,8 +1,9 @@
 from exibir_chutes import exibir_chutes
 import functions
+from gerar_csv import gerar_csv
 
 
-def bissecao(f,a,b, max_iter=25):
+def bissecao(f,a,b, max_iter=100):
     interacoes = []
     if (f(a) * f(b) >= 0):
         print("O produto entre f(a) e f(b) deve ser negativo \n")
@@ -33,3 +34,7 @@ if __name__ == "__main__":
 
     for interacao in lista_interacoes:
         exibir_chutes(interacao, 'Método numérico: bisseção')
+    gerar_csv('bisection', interacoesPrimeiraFuncao)
+    gerar_csv('bisection', interacoesSegundafuncao)
+    gerar_csv('bisection', interacoesTerceiraFuncao)
+    gerar_csv('bisection', interacoesQuartaFuncao)

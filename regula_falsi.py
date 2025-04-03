@@ -1,9 +1,10 @@
 from exibir_chutes import exibir_chutes
 import functions
+from gerar_csv import gerar_csv
 
 functions.primeiraFuncao(2)
 
-def regula_falsi(f, a , b, max_iter=25):
+def regula_falsi(f, a , b, max_iter=100):
     interacoes = []
 
     if f(a) * f(b) >= 0:
@@ -37,3 +38,8 @@ if __name__ == "__main__":
 
     for interacao in lista_interacoes:
         exibir_chutes(interacao, 'Método numérico: falsa posição')
+    
+    gerar_csv('regula_falsi', interacoesPrimeiraFuncao)
+    gerar_csv('regula_falsi', interacoesSegundafuncao)
+    gerar_csv('regula_falsi', interacoesTerceiraFuncao)
+    gerar_csv('regula_falsi', interacoesQuartaFuncao)
