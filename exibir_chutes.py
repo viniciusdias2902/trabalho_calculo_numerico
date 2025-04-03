@@ -1,28 +1,22 @@
 def exibir_chutes(chutes, metodo, precisao=10):
- 
-    BOLD = '\033[1m'
-    BLUE = '\033[94m'
-    CYAN = '\033[96m'
-    YELLOW = '\033[93m'
-    GREEN = '\033[92m'
-    MAGENTA = '\033[95m'
-    RESET = '\033[0m'
-    LINE = f"{BOLD}{CYAN}│{RESET}"
+    # Configuração de larguras
+    largura_iter = 12
+    largura_chute = 25
+    largura_erro = 25
     
-    print(f"\n{BOLD}{BLUE}┌{'─' * 62}┐{RESET}")
-    print(f"{BOLD}{BLUE}│ {GREEN}● {MAGENTA}{metodo.upper():^58} {BLUE}●{RESET} {BOLD}{BLUE}│{RESET}")
-    print(f"{BOLD}{BLUE}├{'─' * 29}┬{'─' * 31}┤{RESET}")
-    print(f"{BOLD}{BLUE}│ {YELLOW}Iteração {LINE} {YELLOW}Chute{' ' * (precisao + 2)} {LINE} {YELLOW}Erro Relativo (%) {RESET}{BOLD}{BLUE}│{RESET}")
-    print(f"{BOLD}{BLUE}├{'─' * 29}┼{'─' * 31}┤{RESET}")
+    # Cabeçalho
+    print("─" * (largura_iter + largura_chute + largura_erro + 2))
+    print(f"{metodo.upper():^{largura_iter + largura_chute + largura_erro + 2}}")
+    print("─" * (largura_iter + largura_chute + largura_erro + 2))
+    print(f"{'Iteração':^{largura_iter}}│{'Chute':^{largura_chute}}│{'Erro Relativo (%)':^{largura_erro}}")
+    print("─" * (largura_iter + largura_chute + largura_erro + 2))
 
+    # Corpo da tabela
     for i, x in enumerate(chutes):
         erro = abs((chutes[i] - chutes[i-1])/chutes[i])*100 if i > 0 else 0
-        col_iter = f"{i:03d}"
-        col_chute = f"{x:.{precisao}f}"
-        col_erro = f"{erro:.4e}" if i > 0 else "─"
+        erro_str = f"{erro:.4e}" if i > 0 else "─"
         
-        print(f"{BOLD}{BLUE}│ {CYAN}{col_iter:^8} {LINE} {YELLOW}{col_chute:^{precisao + 6}} "
-              f"{LINE} {GREEN}{col_erro:^15} {BOLD}{BLUE}│{RESET}")
+        print(f"{i:^{largura_iter}}│{x:^{largura_chute}.{precisao}f}│{erro_str:^{largura_erro}}")
 
-    print(f"{BOLD}{BLUE}└{'─' * 29}┴{'─' * 31}┘{RESET}")
-    print(f"{BOLD}{MAGENTA}Último chute: {YELLOW}{chutes[-1]:.{precisao}f}{RESET}\n")
+    # Rodapé
+    print("─" * (largura_iter + largura_chute + largura_erro + 2))
