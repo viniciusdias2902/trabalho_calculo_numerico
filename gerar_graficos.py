@@ -77,7 +77,7 @@ def gerar_relatorio(dados):
             'Função': funcao,
             'Melhor Método': melhor_metodo['Método'].iloc[0],
             'Iterações': len(melhor_metodo),
-            'Convergência Final': melhor_metodo['valor'].iloc[-1]
+            'Convergência Final': melhor_metodo['Resultado'].iloc[-1]
         })
     
     df_analise = pd.DataFrame(analise)
