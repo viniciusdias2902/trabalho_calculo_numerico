@@ -10,7 +10,7 @@ def bissecao(f,a,b, max_iter=100, tol=1e-6):
         return
     c = a
     for _ in range(max_iter+1):
-            if (((b-a) < 0.01)):
+            if (((b-a) < tol)):
                  return c, interacoes
             
             c = (a+b)/2
