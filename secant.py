@@ -29,4 +29,4 @@ if __name__ == "__main__":
 
     for index, interacao in enumerate(lista_interacoes):
         gerar_csv(f'secant_{index+1}', interacao)
-        exibir_chutes(interacao, 'Método numérico: secante')
+        exibir_chutes(interacao, 'Método numérico: secante', interacao[-1])

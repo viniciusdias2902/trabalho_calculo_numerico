@@ -33,4 +33,4 @@ if __name__ == "__main__":
 
     for index, interacao in enumerate(lista_interacoes):
         gerar_csv(f'newton_raphson_{index+1}', interacao)
-        exibir_chutes(interacao, 'Método numérico: newton-raphson')
+        exibir_chutes(interacao, 'Método numérico: newton-raphson', interacao[-1])

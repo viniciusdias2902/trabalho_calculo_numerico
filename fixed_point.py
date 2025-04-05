@@ -28,4 +28,4 @@ if __name__ == "__main__":
 
     for index, interacao in enumerate(lista_interacoes):
         gerar_csv(f'fixed_point_{index+1}', interacao)
-        exibir_chutes(interacao, 'Método numérico: ponto fixo')
+        exibir_chutes(interacao, 'Método numérico: ponto fixo', interacao[-1])

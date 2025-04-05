@@ -34,4 +34,4 @@ if __name__ == "__main__":
 
     for index, interacao in enumerate(lista_interacoes):
         gerar_csv(f'bisection_{index+1}', interacao)        
-        exibir_chutes(interacao, 'Método numérico: bisseção')
+        exibir_chutes(interacao, 'Método numérico: bisseção', interacao[-1])
